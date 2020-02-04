@@ -1,0 +1,342 @@
+.showcase-html-section a, .showcase-html-section a:hover {
+  text-decoration: none;
+}
+
+/***
+**** HIDE CHROME **********************************
+***/
+.showcase-html-section {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.template-header {
+  min-height: 70px;
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-bottom: none;
+}
+
+.main-header,
+.header-dropdowns,
+#navAccordion,
+.dropdown-nav,
+#banner,
+.footer,
+.overlay,
+.secondary-logo-holder {
+  display: none;
+}
+
+.primary-logo {
+  max-height: 58px;
+}
+
+/***
+**** PROGRESS BAR
+***/
+.progress-bar {
+  position: fixed;
+  z-index: 100;
+  top: 70px;
+  left: 0;
+  width: 0;
+  height: 8px;
+  background-color: #c1a2d5;
+}
+
+/***
+**** ARROWS ***************************************
+***/
+.direction-arrow {
+  position: absolute;
+  color: #FFF;
+  opacity: 0.6;
+  font-size: 2em;
+  z-index: 300;
+  width: 50px;
+}
+@media only screen and (max-width: 801px) {
+  .direction-arrow {
+    width: 39px;
+  }
+}
+.direction-arrow--left {
+  left: 0;
+  top: 50%;
+  margin-left: 1%;
+  visibility: hidden;
+}
+@media only screen and (max-width: 801px) {
+  .direction-arrow--left {
+    top: unset;
+    bottom: 3%;
+    margin-left: 12%;
+  }
+}
+.direction-arrow--right {
+  right: 0;
+  top: 50%;
+  margin-right: 1%;
+  visibility: hidden;
+}
+@media only screen and (max-width: 801px) {
+  .direction-arrow--right {
+    top: unset;
+    bottom: 3%;
+    margin-right: 12%;
+  }
+}
+.direction-arrow__link {
+  display: block;
+}
+.direction-arrow__link svg {
+  fill: #FFF;
+}
+.direction-arrow:hover {
+  opacity: 1;
+}
+
+/***
+**** SCENES ****************************************
+***/
+.scene {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  position: absolute;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.scene-home {
+  overflow: hidden;
+  background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/demo-landing-page-scene-0-banner-1x.jpg");
+  z-index: 1;
+  opacity: 1;
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .scene-home {
+    background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/demo-landing-page-scene-0-banner-2x.jpg");
+  }
+}
+.scene-dedication {
+  background-position: 58% center;
+}
+@media only screen and (min-width: 1025px) {
+  .scene-dedication {
+    background-position: left center;
+  }
+}
+.scene-dedication.load-next-background {
+  background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/nurse-1x.jpg");
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .scene-dedication.load-next-background {
+    background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/nurse-2x.jpg");
+  }
+}
+.scene-dedication .dark-overlay .content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.scene-dedication .dark-overlay .content-block__text {
+  margin-bottom: 0;
+}
+.scene-igniting.load-next-background {
+  background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/spark-1x.jpg");
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .scene-igniting.load-next-background {
+    background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/spark-2x.jpg");
+  }
+}
+.scene-shouting {
+  background-position: right center;
+}
+.scene-shouting.load-next-background {
+  background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/demo-landing-page-scene-3-malans-1x.jpg");
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .scene-shouting.load-next-background {
+    background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/demo-landing-page-scene-3-malans-2x.jpg");
+  }
+}
+.scene-connection {
+  background-position: 34% center;
+}
+.scene-connection.load-next-background {
+  background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/piano-1x.jpg");
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .scene-connection.load-next-background {
+    background-image: url("https://apps.weber.edu/wsuimages/pursuit/backgrounds/piano-2x.jpg");
+  }
+}
+
+/***
+**** SCENE CONTENT **************************************
+***/
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-block {
+  padding: 3%;
+  width: 80%;
+  max-width: 700px;
+  min-width: 350px;
+  opacity: 0;
+}
+@media only screen and (min-width: 1500px) {
+  .content-block {
+    max-width: 760px;
+  }
+}
+.content-block__text {
+  color: #FFF;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1025px) {
+  .content-block__text {
+    font-size: 20px;
+  }
+}
+.content-block__video-link, .content-block__video-link:visited {
+  color: #FFF;
+  font-size: 13em;
+  text-decoration: none;
+  align-self: center;
+  height: 213px;
+}
+@media only screen and (max-width: 640px) {
+  .content-block__video-link, .content-block__video-link:visited {
+    font-size: 9em;
+  }
+}
+.content-block__video-link:hover {
+  color: #492365;
+}
+
+/***
+**** BUTTONS ****************************************
+***/
+.button-begin {
+  display: flex;
+  position: absolute;
+  right: 27%;
+  bottom: 20%;
+  border-radius: 5px;
+  padding: 0.85em 1.5em !important;
+  color: #FFF !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media only screen and (min-width: 1025px) {
+  .button-begin {
+    bottom: 61%;
+  }
+}
+.button-begin__arrow {
+  margin-left: 10px;
+}
+
+a.content-block__button-link {
+  display: inline-block;
+  border: 3px solid #FFF;
+  border-radius: 10px;
+  padding: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #FFF !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a.content-block__button-link:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+a.content-block__button-link:hover {
+  color: #FFF;
+  background-color: #492365;
+  border-color: #492365;
+}
+
+/***
+**** VIDEO ********************************************
+***/
+.ytp-chrome-top {
+  display: none;
+}
+
+.scene-vid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-width: 100vw;
+  border: none;
+}
+.scene-vid__content-block {
+  text-align: center;
+}
+.scene-vid__content-block__close-btn {
+  font-size: calc(2em + 3vw);
+  color: #FFF;
+}
+.scene-vid__content-block__close-btn:hover, .scene-vid__content-block__close-btn:focus {
+  color: #8446ac;
+  cursor: pointer;
+}
+.scene-vid__content-block__video-container iframe {
+  width: 50vw;
+  height: calc(50vw * (9 / 16));
+}
+@media only screen and (max-width: 800px) {
+  .scene-vid__content-block__video-container iframe {
+    width: 80vw;
+    height: calc(80vw * (9 / 16));
+  }
+}
+@media only screen and (max-width: 640px) {
+  .scene-vid__content-block__video-container iframe {
+    width: 90vw;
+    height: calc(90vw * (9 / 16));
+  }
+}

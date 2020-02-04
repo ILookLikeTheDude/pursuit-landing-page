@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'ywft-reg-two';
+    src: local('ywft-reg-two');
+    src: url("https://www.weber.edu/wsuimages/pursuit/fonts/ywft-reg-two/ywft-reg-two.woff2") format("woff2");/* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}

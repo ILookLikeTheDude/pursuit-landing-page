@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'ywft-reg-two';
+    src: local('ywft-reg-two');
+    url("https://www.weber.edu/wsuimages/pursuit/fonts/ywft-reg-two/Yywft-reg-two.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
